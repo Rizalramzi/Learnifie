@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #232323;
+}
+.ror{
+    font-family: Outfit;
+    color: white;
+    letter-spacing: 10px;
+    margin-top: 25%;
+    text-align: center;
+}
+.president{
+    margin-top: 30%;
+}
+.president .col-3 img{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 5, .7);
+}
+.president .col-3 {
+    position: relative; /* Menjadikan kolom posisi relatif */
+  }
+
+  .president .col-3 .img:before{
+    align-items: center;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Warna lapisan dengan opacity */
+    opacity: 0; /* Sembunyikan lapisan secara default */
+    transition: opacity 0.3s ease-in-out; /* Animasi perubahan opacity */
+    pointer-events: none; /* Hindari lapisan menghalangi interaksi */
+    border-radius: 10px;
+  }
+  .president .col-3:hover:before {
+    opacity: 1; /* Tampilkan lapisan dengan opacity saat menghover */
+  }
+
+  .president .col-3 h3{
+    position: absolute; /* Menjadikan h3 dan p posisi absolut */
+    top: 50%; /* Posisi vertikal ke tengah */
+    left: 50%; /* Posisi horizontal ke tengah */
+    transform: translate(-50%, -50%); /* Menggeser ke tengah */
+    opacity: 0; /* Sembunyikan h3 dan p secara default */
+    transition: opacity 0.3s ease-in-out; /* Animasi perubahan opacity */
+    color: white;
+  }
+
+  .president .col-3 p {
+    position: absolute; /* Menjadikan h3 dan p posisi absolut */
+    top: 70%; /* Posisi vertikal ke tengah */
+    left: 50%; /* Posisi horizontal ke tengah */
+    transform: translate(-50%, -50%); /* Menggeser ke tengah */
+    opacity: 0; /* Sembunyikan h3 dan p secara default */
+    transition: opacity 0.3s ease-in-out; /* Animasi perubahan opacity */
+    color: white;
+  }
+
+  .president .col-3:hover h3,
+  .president .col-3:hover p {
+    opacity: 1; /* Tampilkan h3 dan p saat menghover */
+  }
