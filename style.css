@@ -34,6 +34,7 @@
     background-color: transparent;
     border-color: #045B53;
     color: #045B53;
+    box-shadow: none;
 }
 .btn-custom-1:hover {
     background-color: #045B53;
@@ -43,6 +44,7 @@
     padding: 10px 20px;
     background-color: #045B53;
     color: white;
+    box-shadow: none;
 }
 .btn-custom:hover{
     background-color: #033b36;
