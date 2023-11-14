@@ -57,12 +57,15 @@ body{
 
 
 /* Content */
-.hero{
+.hero, .learn{
     margin-top: 3%;
 }
-.adv, .join, .footage, .ai {
+.adv, .join, .footage, .ai{
     margin-top: 10%;
-  }  
+  } 
+.material{
+    margin-top: 18%;
+}
 .img-r {
     transition: box-shadow 0.3s;
     border-radius: 15px;
