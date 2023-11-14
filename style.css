@@ -2,7 +2,9 @@
     padding: 0;
     margin: 0;
 }
-
+body{
+    min-height:2000px ;
+}
 
 /* Nav */
 .navbar-nav .nav-link.active {
@@ -58,18 +60,9 @@
 .hero{
     margin-top: 3%;
 }
-.adv{
+.adv, .join, .footage, .ai {
     margin-top: 10%;
-}
-.join{
-    margin-top: 10%;
-}
-.footage{
-    margin-top: 10%;
-}
-.ai{
-    margin-top: 10%;
-}
+  }  
 .img-r {
     transition: box-shadow 0.3s;
     border-radius: 15px;
