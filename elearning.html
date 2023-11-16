@@ -58,13 +58,13 @@
 
       function generateResponse(userMessage) {
           // Contoh respons sederhana
-          if (userMessage.toLowerCase().includes("halo")) {
+          if (userMessage.includes("halo")) {
               return "Halo! Dengan BotFie Disini! Ada yang bisa dibantu?";
-          } else if (userMessage.toLowerCase().includes("apa itu html")) {
+          } else if (userMessage.includes("apa itu html")) {
               return "HTML, singkatan dari HyperText Markup Language, adalah bahasa markah standar untuk membuat halaman web. Ini menyediakan seperangkat tag yang mendefinisikan struktur dan konten halaman web, memungkinkan browser web untuk menafsirkan dan menampilkan halaman dengan benar. HTML bukan bahasa pemrograman, melainkan bahasa markah yang digunakan untuk menggambarkan konten dan struktur halaman web.";
-          } else if (userMessage.toLowerCase().includes("siapa presiden pertama indonesia")){
+          } else if (userMessage.includes("siapa presiden pertama indonesia")){
             return "Presiden Pertama Indonesia Adalah Ir. Soekarno";
-          } else if (userMessage.toLowerCase().includes("bagaimana cara print di python")){
+          } else if (userMessage.includes("bagaimana cara print di python")){
             return "Di Python, Anda dapat menggunakan pernyataan print untuk mencetak output ke konsol atau terminal. Format umum dari perintah 'print'";
           }else {
             return "GAADA! yang bener kalo input!";
@@ -97,7 +97,7 @@
           <li class="nav-item">
             <a class="nav-link" href="bootcamp.html">Bootcamp</a></li>
           <li class="nav-item">
-            <a class="nav-link" href="#quiz">Quiz</a></li>
+            <a class="nav-link" href="quiz.html">Quiz</a></li>
         </ul>
         <ul class="navbar-nav ms-auto">
           <li class="navbar-nav ms-auto">
@@ -166,7 +166,7 @@
 <!-- End Material -->
 
 <!-- ChatBot -->
-<div class="chatbot-container">
+<div class="chatbot-container" id="chatbot-section">
   <div class="container">
     <h3 style="color: #045B53;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"><b>Chat With BotFie</b></h3>
       <div id="chatbox" class="mb-3 mt-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700">

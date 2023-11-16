@@ -38,7 +38,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="bootcamp.html">Bootcamp</a></li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#quiz">Quiz</a></li>
+                  <a class="nav-link" href="quiz.html">Quiz</a></li>
               </ul>
               <ul class="navbar-nav ms-auto">
                 <li class="navbar-nav ms-auto">
@@ -141,14 +141,14 @@
             <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni amet quaerat tempore fuga harum saepe accusantium nisi ex nobis laborum!</p>
           </div>
         </div>
-        <div class="row mt-2" data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
+        <!-- <div class="row mt-2" data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
           <div class="col-md-6 mx-auto d-flex align-items-center">
             <input id="newsletter1" type="text" class="form-control" placeholder="Ask Everything" style="height: 140%; border-color: #045B53; box-shadow: none;">
           </div>
-        </div>
+        </div> -->
         <div class="row mt-4" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom">
           <div class="col-md-12 text-center">
-            <button class="btn btn-custom">Send</button>
+            <button class="btn btn-custom" onclick="move()">Try Now!</button>
           </div>
         </div>
       </div>
@@ -214,5 +214,11 @@
         link.classList.add('active');
       });
     });
+  </script>
+
+  <script>
+      function move() {
+          window.location.href = "elearning.html#chatbot-section";
+      }
   </script>
 </html>

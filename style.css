@@ -57,7 +57,7 @@ body{
 
 
 /* Content */
-.hero, .learn{
+.hero, .learn, .quiz{
     margin-top: 3%;
 }
 .adv, .join, .footer, .ai{
