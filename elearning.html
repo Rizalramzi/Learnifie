@@ -14,6 +14,65 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/icon.png">
     <title>E - Learning | Learnifie</title>
+
+    <!-- System ChatBot -->
+    <script>
+      function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      async function typeMessage(message, elementId, className) {
+          var chatbox = document.getElementById(elementId);
+          var newMessage = document.createElement("div");
+          newMessage.className = className;
+          chatbox.appendChild(newMessage);
+
+          for (let i = 0; i < message.length; i++) {
+              newMessage.innerHTML += `<span class="typing-animation">${message.charAt(i)}</span>`;
+              await sleep(15);
+          }
+      }
+
+      async function sendMessage() {
+          var userInput = document.getElementById("userInput");
+          var message = userInput.value.trim();
+
+          if (message === "") {
+              alert("Please enter a message.");
+              return;
+          }
+
+          appendMessage("Ramzi", message, "user-message");
+          await sleep(500); // Simulating delay for a more natural conversation flow
+          typeMessage(generateResponse(message), "chatbox", "chatbot-message");
+          userInput.value = "";
+      }
+
+      function appendMessage(sender, message, className) {
+          var chatbox = document.getElementById("chatbox");
+          var newMessage = document.createElement("div");
+          newMessage.innerHTML = `<strong>${sender}:</strong> ${message}`;
+          newMessage.className = className;
+          chatbox.appendChild(newMessage);
+      }
+
+      function generateResponse(userMessage) {
+          // Contoh respons sederhana
+          if (userMessage.toLowerCase().includes("halo")) {
+              return "Halo! Dengan BotFie Disini! Ada yang bisa dibantu?";
+          } else if (userMessage.toLowerCase().includes("apa itu html")) {
+              return "HTML, singkatan dari HyperText Markup Language, adalah bahasa markah standar untuk membuat halaman web. Ini menyediakan seperangkat tag yang mendefinisikan struktur dan konten halaman web, memungkinkan browser web untuk menafsirkan dan menampilkan halaman dengan benar. HTML bukan bahasa pemrograman, melainkan bahasa markah yang digunakan untuk menggambarkan konten dan struktur halaman web.";
+          } else if (userMessage.toLowerCase().includes("siapa presiden pertama indonesia")){
+            return "Presiden Pertama Indonesia Adalah Ir. Soekarno";
+          } else if (userMessage.toLowerCase().includes("bagaimana cara print di python")){
+            return "Di Python, Anda dapat menggunakan pernyataan print untuk mencetak output ke konsol atau terminal. Format umum dari perintah 'print'";
+          }else {
+            return "GAADA! yang bener kalo input!";
+          }
+      }
+  </script>
+  <!-- End System ChatBot -->
+
 </head>
 <body>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -36,7 +95,7 @@
           <li class="nav-item">
             <a class="nav-link active" href="elearning.html">E-Learning</a></li>
           <li class="nav-item">
-            <a class="nav-link" href="#bootcamp">Bootcamp</a></li>
+            <a class="nav-link" href="bootcamp.html">Bootcamp</a></li>
           <li class="nav-item">
             <a class="nav-link" href="#quiz">Quiz</a></li>
         </ul>
@@ -82,29 +141,44 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"></a>
+            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="500"></a>
           </div>
           <div class="col-md-4">
             <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"></a>
           </div>
           <div class="col-md-4">
-            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700"></a>
+            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="700"></a>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
-            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"></a>
+            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-right" data-aos-anchor-placement="top-bottom" data-aos-duration="500"></a>
           </div>
           <div class="col-md-4">
             <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"></a>
           </div>
           <div class="col-md-4">
-            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700"></a>
+            <a href=""><img src="assets/learn.png" class="rounded mx-auto d-block mt-5 learn__material" width="250" data-aos="fade-left" data-aos-anchor-placement="top-bottom" data-aos-duration="700"></a>
           </div>
         </div>
     </div>
 </div>
 <!-- End Material -->
+
+<!-- ChatBot -->
+<div class="chatbot-container">
+  <div class="container">
+    <h3 style="color: #045B53;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="500"><b>Chat With BotFie</b></h3>
+      <div id="chatbox" class="mb-3 mt-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="700">
+        <h5 style="color: #045B53;" class="text-center"><b>Learnifie.</b></h5>
+      </div>
+      <div id="inputBox" class="form-inline">
+          <input type="text" id="userInput" class="form-control mr-2 mt-2" placeholder="Ask BonFie!" style="box-shadow: none; border-color:#045B53;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
+          <button onclick="sendMessage()" class="btn btn-custom mt-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">Send</button>
+      </div>
+  </div>
+</div>
+<!-- End ChatBot -->
 
 <!-- Footer -->
 <div class="footer" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="300">

@@ -81,4 +81,40 @@ body{
     filter: brightness(70%);
 }
 
+/* Chatbot */
+.chatbot-container {
+    margin-top: 10%; /* Adjust the margin based on your design */
+}
+
+#chatbox {
+    height: 300px;
+    overflow: auto;
+    border: 1px solid #045B53;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#inputBox {
+    margin-top: 2%;
+}
+#userInput{
+    height: 50px;
+}
+.user-message {
+    text-align: right;
+}
+
+.chatbot-message {
+    text-align: left;
+    max-width: 50%;
+    word-wrap: break-word;
+    background-color: #045B53;
+    color: white;
+    border-radius: 10px;
+}
+.chatbot-message{
+    padding: 8px;
+    margin-bottom: 10px;
+}
+/* End Chatbot */
 /* End Content */
