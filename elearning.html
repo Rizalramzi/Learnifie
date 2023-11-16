@@ -43,7 +43,7 @@
           }
 
           appendMessage("Ramzi", message, "user-message");
-          await sleep(500); // Simulating delay for a more natural conversation flow
+          await sleep(500);
           typeMessage(generateResponse(message), "chatbox", "chatbot-message");
           userInput.value = "";
       }
@@ -173,7 +173,7 @@
         <h5 style="color: #045B53;" class="text-center"><b>Learnifie.</b></h5>
       </div>
       <div id="inputBox" class="form-inline">
-          <input type="text" id="userInput" class="form-control mr-2 mt-2" placeholder="Ask BonFie!" style="box-shadow: none; border-color:#045B53;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
+          <input type="text" id="userInput" class="form-control mr-2 mt-2" placeholder="Ask BotFie!" style="box-shadow: none; border-color:#045B53;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
           <button onclick="sendMessage()" class="btn btn-custom mt-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">Send</button>
       </div>
   </div>
