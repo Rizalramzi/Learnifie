@@ -20,15 +20,29 @@
     <script>
       AOS.init()
     </script>
-    
-    <div class="form-login">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <input id="newsletter1" type="text" class="form-control" placeholder="Ask Everything" style="height: 140%; border-color: #045B53; box-shadow: none;">
+    <!-- Form Login -->
+    <div class="login">
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-md-6 col-sm-8 col-xs-12">
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </form>
+                <div class="text-center mt-3">
+                    <p>Don't have an account? <a href="#">Register here</a></p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- End Form Login -->
 </body>
 </html>
