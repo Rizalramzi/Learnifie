@@ -5,6 +5,7 @@
 }
 body{
     font-family: Outfit;
+    min-height: 2000px;
 }
 
 /* Nav */
@@ -58,14 +59,14 @@ body{
 
 
 /* Content */
-.hero, .learn, .quiz{
+.hero, .learn, .quiz, .list{
     margin-top: 3%;
 }
 .adv, .join, .footer, .ai, .reason{
     margin-top: 10%;
   } 
-.material{
-    margin-top: 15%;
+.material, .list-material{
+    margin-top: 17%;
 }
 .img-r {
     transition: box-shadow 0.3s;
@@ -81,12 +82,25 @@ body{
 .learn__material:hover {
     filter: brightness(90%);
 }
+.img-web {
+    transition: filter 0.5s ease;
+}
+.img-web:hover {
+    filter: brightness(90%);
+}
 .advantage:hover{
     border-radius: 10px;
     background-color: #045B53;
     color: white;
 }
-
+.box-list-video{
+    height: 450px;
+    overflow: auto;
+    border: 1px solid #045B53;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20%;
+}
 /* Chatbot */
 .chatbot-container {
     margin-top: 10%; /* Adjust the margin based on your design */
