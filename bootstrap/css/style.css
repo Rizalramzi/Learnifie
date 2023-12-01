@@ -54,6 +54,18 @@ body{
     background-color: #033b36;
     color: white;
 }
+.btn-custom-2{
+    padding: 10px 20px;
+    background-color: white;
+    color: #045B53;
+}
+.btn-custom-2:hover{
+     
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    box-shadow: none;
+}
 /* End Custom Button */
 
 
@@ -62,7 +74,7 @@ body{
 .hero, .learn, .quiz, .list{
     margin-top: 3%;
 }
-.adv, .join, .footer, .ai, .reason{
+.adv, .join, .footer, .ai, .question, .reason{
     margin-top: 10%;
   } 
 .material, .list-material{
@@ -77,16 +89,25 @@ body{
     border-radius: 15px;
 }
 .learn__material {
-    transition: filter 0.5s ease;
+    transition: filter 0.3s ease;
 }
 .learn__material:hover {
     filter: brightness(90%);
 }
 .img-web {
-    transition: filter 0.5s ease;
+    transition: filter 0.3s ease;
 }
 .img-web:hover {
     filter: brightness(90%);
+}
+.list-video{
+    transition: filter 0.3s ease;
+}
+.list-video:hover{
+    filter: brightness(80%);
+}
+.list-active{
+    filter: brightness(80%);
 }
 .advantage:hover{
     border-radius: 10px;
