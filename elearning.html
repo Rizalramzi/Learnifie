@@ -180,6 +180,38 @@
       <div id="inputBox" class="form-inline">
           <input type="text" id="userInput" class="form-control mr-2 mt-2" placeholder="Ask BotFie!" style="box-shadow: none; border-color:#045B53;" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="900">
           <button onclick="sendMessage()" class="btn btn-custom mt-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">Send</button>
+          <!-- Button trigger modal -->
+      <button type="button" class="btn btn-custom mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1100">
+        Note
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Keterangan</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Input yang terdaftar :
+              <br>
+              "apa itu html"
+              <br>
+              "apa itu web development"
+              <br>
+              "siapa presiden pertama indonesia"
+              <br>
+              "halo"
+              <br>
+              Note:Perhatikan besar kecilnya huruf
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
   </div>
 </div>
